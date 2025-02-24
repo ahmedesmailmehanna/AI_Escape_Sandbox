@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerCam : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
     public float sensX;
     public float sensY;

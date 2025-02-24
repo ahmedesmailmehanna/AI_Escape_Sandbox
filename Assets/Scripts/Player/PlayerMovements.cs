@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementForceMultiplier = 3.5f; // Scales force applied to movement
 
     private bool isGrounded;
-    public Transform orientation;
+    public Transform playerBody;
     private float horizontalInput;
     private float verticalInput;
     private Vector3 moveDirection;
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        moveDirection = (orientation.forward * verticalInput + orientation.right * horizontalInput).normalized;
+        moveDirection = (playerBody.forward * verticalInput + playerBody.right * horizontalInput).normalized;
 
         // Adjust movement speed dynamically
         float currentSpeed = isGrounded
